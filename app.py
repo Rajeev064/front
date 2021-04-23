@@ -9,7 +9,17 @@ import pandas as pd
 import numpy as np
 app = Flask(__name__)
 
+
 @app.route('/')
+def home():
+    return render_template('index.html')
+@app.route('/login')
+def login():
+    return render_template('log-in.html')
+@app.route('/signup')
+def register():
+    return render_template('sign-up.html')
+@app.route('/lab')
 def bokeh():
     fig = figure(title='Hemoglobin',plot_width=400, plot_height=300, x_axis_type="datetime", responsive = True)
     df = pd.DataFrame.from_dict({'dates': ["1-1-2019", "2-1-2019", "3-1-2019", "4-1-2019", "5-1-2019", "6-1-2019", "7-1-2019", "8-1-2019", "9-1-2019", "10-1-2019"], 
@@ -20,7 +30,8 @@ def bokeh():
         x='dates',
         y='x', 
         source=source,
-        line_width=2
+        line_width=2,
+        line_color='#17252A'
     )
     fig.circle(x='dates', y='x',source=source, fill_color="#DEF2F1", size=8)
     fig.add_tools(HoverTool(tooltips=[("Y", "@x")]))
@@ -32,7 +43,8 @@ def bokeh():
         x='dates',
         y='x', 
         source=source,
-        line_width=2
+        line_width=2,
+        line_color='#17252A'
     )
     s2.circle(x='dates', y='x',source=source, fill_color="#DEF2F1", size=8)
     s2.add_tools(HoverTool(tooltips=[("Y", "@x")]))
@@ -45,7 +57,8 @@ def bokeh():
         x='dates',
         y='x', 
         source=source,
-        line_width=2
+        line_width=2,
+        line_color='#17252A'
     )
     s3.circle(x='dates', y='x',source=source, fill_color="#DEF2F1", size=8)
     s3.add_tools(HoverTool(tooltips=[("Y", "@x")]))
@@ -57,7 +70,8 @@ def bokeh():
         x='dates',
         y='x', 
         source=source,
-        line_width=2
+        line_width=2,
+        line_color='#17252A'
     )
     s4.circle(x='dates', y='x',source=source, fill_color="#DEF2F1", size=8)
     s4.add_tools(HoverTool(tooltips=[("Y", "@x")]))
@@ -69,7 +83,8 @@ def bokeh():
         x='dates',
         y='x', 
         source=source,
-        line_width=2
+        line_width=2,
+        line_color='#17252A'
     )
     s5.circle(x='dates', y='x',source=source, fill_color="#DEF2F1", size=8)
     s5.add_tools(HoverTool(tooltips=[("Y", "@x")]))    
@@ -81,7 +96,8 @@ def bokeh():
         x='dates',
         y='x', 
         source=source,
-        line_width=2
+        line_width=2,
+        line_color='#17252A'
     )
     s6.circle(x='dates', y='x',source=source, fill_color="#DEF2F1", size=8)
     s6.add_tools(HoverTool(tooltips=[("Y", "@x")]))

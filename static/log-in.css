@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: #DEF2F1;
+    background: #3AAFA9;
 }
 
 .card {
@@ -67,14 +67,14 @@ body {
 
 /*Header*/
 .navbar {
-  background-color: #3AAFA9;
+  background-color: #2B7A78 ;
 }
 /*End Header Styling*/
 /*Footer*/
 .site-footer {
     margin-top: 100px; /* Remove */
     position: relative;
-    background-color:#3AAFA9;
+    background-color:#2B7A78 ;
     width: 100%;  
     bottom: 0; 
   }
