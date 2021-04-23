@@ -1,7 +1,7 @@
 .navbar{
     position: fixed;
     transition: 1s;
-    background-color: #24305E;
+    background-color: #3AAFA9;
   }
     .navbar-brand{
             color: #fff;
@@ -76,7 +76,7 @@
 .site-footer {
     margin-top: 100px; /* Remove */
     position: relative;
-    background-color:#24305E;
+    background-color:#3AAFA9;
     width: 100%;  
     bottom: 0; 
   }

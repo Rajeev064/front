@@ -22,9 +22,9 @@ def bokeh():
         source=source,
         line_width=2
     )
-    fig.circle(x='dates', y='x',source=source, fill_color="#F8E9A1", size=8)
+    fig.circle(x='dates', y='x',source=source, fill_color="#DEF2F1", size=8)
     fig.add_tools(HoverTool(tooltips=[("Y", "@x")]))
-    fig.border_fill_color = "#a8d0e6"
+    fig.border_fill_color = "#DEF2F1"
     fig.min_border_right = 80
     s2 = figure(title='Hemoglobin',plot_width=400, plot_height=300, x_axis_type="datetime", responsive = True)
     source = ColumnDataSource(df)
@@ -34,9 +34,9 @@ def bokeh():
         source=source,
         line_width=2
     )
-    s2.circle(x='dates', y='x',source=source, fill_color="#F8E9A1", size=8)
+    s2.circle(x='dates', y='x',source=source, fill_color="#DEF2F1", size=8)
     s2.add_tools(HoverTool(tooltips=[("Y", "@x")]))
-    s2.border_fill_color = "#a8d0e6"
+    s2.border_fill_color = "#DEF2F1"
     s2.min_border_right = 80
     # create and another
     s3 = figure(title='Hemoglobin',plot_width=400, plot_height=300, x_axis_type="datetime", responsive = True)
@@ -47,9 +47,9 @@ def bokeh():
         source=source,
         line_width=2
     )
-    s3.circle(x='dates', y='x',source=source, fill_color="#F8E9A1", size=8)
+    s3.circle(x='dates', y='x',source=source, fill_color="#DEF2F1", size=8)
     s3.add_tools(HoverTool(tooltips=[("Y", "@x")]))
-    s3.border_fill_color = "#a8d0e6"
+    s3.border_fill_color = "#DEF2F1"
     s3.min_border_right = 80
     s4 = figure(title='Hemoglobin',plot_width=400, plot_height=300, x_axis_type="datetime", responsive = True)
     source = ColumnDataSource(df)
@@ -59,9 +59,9 @@ def bokeh():
         source=source,
         line_width=2
     )
-    s4.circle(x='dates', y='x',source=source, fill_color="#F8E9A1", size=8)
+    s4.circle(x='dates', y='x',source=source, fill_color="#DEF2F1", size=8)
     s4.add_tools(HoverTool(tooltips=[("Y", "@x")]))
-    s4.border_fill_color = "#a8d0e6"
+    s4.border_fill_color = "#DEF2F1"
     s4.min_border_right = 80
     s5 = figure(title='Hemoglobin',plot_width=400, plot_height=300, x_axis_type="datetime", responsive = True)
     source = ColumnDataSource(df)
@@ -71,9 +71,9 @@ def bokeh():
         source=source,
         line_width=2
     )
-    s5.circle(x='dates', y='x',source=source, fill_color="#F8E9A1", size=8)
+    s5.circle(x='dates', y='x',source=source, fill_color="#DEF2F1", size=8)
     s5.add_tools(HoverTool(tooltips=[("Y", "@x")]))    
-    s5.border_fill_color = "#a8d0e6"
+    s5.border_fill_color = "#DEF2F1"
     s5.min_border_right = 80
     s6 = figure(title='Hemoglobin',plot_width=400, plot_height=300, x_axis_type="datetime", responsive = True)
     source = ColumnDataSource(df)
@@ -83,11 +83,11 @@ def bokeh():
         source=source,
         line_width=2
     )
-    s6.circle(x='dates', y='x',source=source, fill_color="#F8E9A1", size=8)
+    s6.circle(x='dates', y='x',source=source, fill_color="#DEF2F1", size=8)
     s6.add_tools(HoverTool(tooltips=[("Y", "@x")]))
-    s6.border_fill_color = "#a8d0e6"
+    s6.border_fill_color = "#DEF2F1"
     s6.min_border_right = 80
-    p = gridplot([[fig, s2,s3],[s4,s5,s6]])
+    p = gridplot([[fig, s2],[s3,s4],[s5,s6]])
     js_resources = INLINE.render_js()
     css_resources = INLINE.render_css()
     # render template
